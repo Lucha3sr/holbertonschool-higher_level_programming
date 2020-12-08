@@ -1,7 +1,8 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 def uppercase(str):
-for i in str:
-
-        return True
-    else:
-        return False
+    for i in str:
+        i = ord(i)
+        if i in range(97, 123):
+            i = i - 32
+        print("{}".format(chr(i)), end='')
+    print("")
