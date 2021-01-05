@@ -24,14 +24,14 @@ class Square:
         return self.__size
 
     @size.setter
-    def size(self, size):
+    def size(self, value):
 
         """setting the value"""
-        if type(size) is not int:
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        if size < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        self.__size = value
 
     def area(self):
         """returns the current area"""
