@@ -6,6 +6,7 @@
 
 class Square:
 
+    """ class Instantiation """
     def __init__(self, size):
 
         """size is private attribute"""
