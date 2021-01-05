@@ -8,7 +8,7 @@ class Square:
 
     """Instantiation with optional size"""
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
 
         """size is private attribute"""
         if type(size) is not int:
@@ -43,3 +43,14 @@ class Square:
             print()
         for i in range(self.__size):
             print("#" * self.__size)
+
+    @property
+    def position(self):
+        """Gets the position of the square"""
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """Sets the position of the square"""
+        if type(value) != tuple or len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
