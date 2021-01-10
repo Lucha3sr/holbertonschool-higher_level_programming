@@ -1,0 +1,71 @@
+>>> print_square = __import__('4-print_square').print_square
+
+test 0 with int 4
+>>> print_square(4)
+####
+####
+####
+####
+
+test 1 with int 10
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+test 2 with 0
+>>> print_square(0)
+<BLANKLINE>
+
+test 3 with int 1
+>>> print_square(1)
+#
+
+test 4 with negative
+>>> print_square(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+test 5 with no parameters
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+test 6 with negative float
+>>> print_square(-1.0)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+test 7 with None
+>>> print_square(None)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+test 8 with more parameters than permited
+>>> print_square(1, 0)
+Traceback (most recent call last):
+...
+TypeError: print_square() takes 1 positional argument but 2 were given
+
+test 9 with variable instead of int
+>>> print_square(a)
+Traceback (most recent call last):
+...
+NameError: name 'a' is not defined
+
+test 10 with string
+>>> print_square("hello")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer

@@ -12,20 +12,37 @@ My name is John Smith
 
 Test 2 print only the name
 >>> say_my_name("Bob")
-My name is Bob
+My name is Bob 
 
-Test 3 with only spaces
+test 3 with no firstname
+>>> say_my_name("", "Smith")
+My name is  Smith
+
+Test 4 with only spaces
 >>> say_my_name(" ", " ")
-My name is
+My name is    
 
-Test 4 first name as integer
+
+Test 5 first name as integer
 >>> say_my_name(12, "White")
 Traceback (most recent call last):
     ...
 TypeError: first_name must be a string
 
-Test 5 last name as integer
+Test 6 last name as integer
 >>> say_my_name("White", 12)
 Traceback (most recent call last):
     ...
 TypeError: last_name must be a string
+
+test 7 syntax error
+>>> say_my_name("John", 5a)
+Traceback (most recent call last):
+    ...
+SyntaxError: invalid syntax
+
+test 8 with variable
+>>> say_my_name(a, "Smith")
+Traceback (most recent call last):
+    ...
+NameError: name 'a' is not defined
