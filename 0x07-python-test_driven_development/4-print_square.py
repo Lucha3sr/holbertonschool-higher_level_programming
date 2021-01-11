@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """
 This function that prints a square with the character #
 size is the size length of the square

@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """
 function that prints
 first_name and last_name must be strings otherwise, raise a TypeError exception
