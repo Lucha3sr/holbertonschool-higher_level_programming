@@ -4,6 +4,7 @@
 This class defines a rectangle
 """
 
+
 class Rectangle:
 
     """ instance attributes: width and height

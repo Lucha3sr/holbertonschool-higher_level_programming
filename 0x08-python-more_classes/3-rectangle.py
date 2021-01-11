@@ -4,6 +4,7 @@
 This class defines a rectangle
 """
 
+
 class Rectangle:
 
     """ instance attributes: width and height
@@ -61,6 +62,6 @@ class Rectangle:
             return string
         for i in range(self.height):
             string += "#" * self.width
-            if i < self.height -1:
+            if i < self.height - 1:
                 string += "\n"
         return string
