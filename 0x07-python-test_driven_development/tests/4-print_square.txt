@@ -22,7 +22,7 @@ test 1 with int 10
 
 test 2 with 0
 >>> print_square(0)
-<BLANKLINE>
+
 
 test 3 with int 1
 >>> print_square(1)
