@@ -22,7 +22,6 @@ test 1 with int 10
 
 test 2 with 0
 >>> print_square(0)
-<BLANKLINE>
 
 test 3 with int 1
 >>> print_square(1)
@@ -66,12 +65,6 @@ NameError: name 'a' is not defined
 
 test 10 with string
 >>> print_square("hello")
-Traceback (most recent call last):
-    ...
-TypeError: size must be an integer
-
-test 11 with 0 chars long
->>> print_square("")
 Traceback (most recent call last):
     ...
 TypeError: size must be an integer
