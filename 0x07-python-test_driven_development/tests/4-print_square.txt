@@ -69,3 +69,9 @@ test 10 with string
 Traceback (most recent call last):
     ...
 TypeError: size must be an integer
+
+test 11 with 0 chars long
+>>> print_square("")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
