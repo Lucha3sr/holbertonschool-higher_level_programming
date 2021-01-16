@@ -54,8 +54,8 @@ Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
 
-test 11 with missing argument
->>> matrix_divided(matrix)
+test 11 with missing 1 argument
+>>> matrix_divided(matrix,)
 Traceback (most recent call last):
 ...
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
@@ -64,4 +64,10 @@ test 12 with None
 >>> matrix_divided(None, 1)
 Traceback (most recent call last):
 ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+test 13 with no arguments
+>>> matrix_divided(None, 1)
+Traceback (most recent call last):
+    ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
