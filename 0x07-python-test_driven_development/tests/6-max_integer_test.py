@@ -30,3 +30,6 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_words(self):
         self.assertRaises(TypeError, max_integer(['hello', 'world']))
+
+    def test_max_at_middle(self):
+        self.assertEqual(max_integer([1, 3, 2]), 3)

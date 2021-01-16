@@ -57,3 +57,6 @@ test 7 with int
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
+
+
+

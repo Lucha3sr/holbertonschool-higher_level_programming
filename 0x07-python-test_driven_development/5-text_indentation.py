@@ -18,6 +18,8 @@ def text_indentation(text):
             if letter == "." or letter == "?" or letter == ":":
                 print(letter, end="")
                 print("\n")
+            elif letter == " ":
+                continue
             else:
                 print(letter, end="")
     else:
