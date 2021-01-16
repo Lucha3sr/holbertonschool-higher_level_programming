@@ -4,23 +4,19 @@ test 0 with a text including . ? :
 >>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem")
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 <BLANKLINE>
- Quonam modo?
+Quonam modo?
 <BLANKLINE>
- Utrum igitur tibi litteram videor an totas paginas commovere?
+Utrum igitur tibi litteram videor an totas paginas commovere?
 <BLANKLINE>
- Non autem hoc:
+Non autem hoc:
 <BLANKLINE>
- igitur ne illud quidem
-
+igitur ne illud quidem
 
 test 1 with . ? :
 >>> text_indentation(".?:")
-.
-<BLANKLINE>
-?
+.?
 <BLANKLINE>
 :
-<BLANKLINE>
 
 test 2 with no parameters
 >>> text_indentation()
