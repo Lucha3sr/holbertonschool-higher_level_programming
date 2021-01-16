@@ -12,17 +12,20 @@ def text_indentation(text):
     """
     Prints a text with 2 new lines after each of these characters: ., ? and :
     """
-    blank_space = 0
-    if type(text) == str:
-        for letter in text:
-            if blank_space == 1:
-                blank_space = 0
+    if type(text) is not str:
+        raise TypeError('text must be a string')
+    space_case = 0
+    for char in text:
+        if space_case == 0:
+            if char == " ":
                 continue
-            if letter == "." or letter == "?" or letter == ":":
-                print(letter, end="")
-                print("\n")
-                blank_space = 1
             else:
-                print(letter, end="")
-    else:
-        raise TypeError("text must be a string")
+                print(char, end="")
+                space_case = 1
+        else:
+            if char == "?" or char == "." or char == ":":
+                print(char)
+                print("")
+                space_case = 0
+            else:
+                print(char, end="")
