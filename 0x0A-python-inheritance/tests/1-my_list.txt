@@ -1,0 +1,89 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list  = MyList()
+
+test 0 with empty list
+>>> print(my_list)
+[]
+
+test 1 with positive ints
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+test 2 with negative ints
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> my_list.append(-1)
+>>> my_list.print_sorted()
+[-1, 1, 2, 3, 4, 5]
+
+Test 3 with float
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> my_list.append(6.5)
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5, 6.5]
+
+test 4 with string
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> my_list.append("six")
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+    ...
+TypeError: unorderable types: str() < int()
+
+Test 5 with None
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> my_list.append(None)
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+    ...
+TypeError: unorderable types: NoneType() < int()
+
+test 6 with infinity float
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> my_list.append(1e100)
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5, 1e+100]
+
+test 7 with NaN
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> my_list.append(float('NaN'))
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5, nan]
+
