@@ -9,5 +9,5 @@ def read_file(filename=""):
     """You dont need to manage file permission"""
     """or file doesn't exist exceptions."""
 
-    with open(filename, encoding="utf-8") as f:
-            print(f.read())
+    with open(filename, 'r', encoding='utf-8') as f:
+        print(f.read(), end='')
