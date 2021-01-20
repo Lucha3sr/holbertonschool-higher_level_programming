@@ -11,5 +11,4 @@ class MyList(list):
     def print_sorted(self):
 
         """ all the elements of the list will be of type int"""
-        if issubclass(MyList, list):
-            print(sorted(self))
+        print(sorted(self))
