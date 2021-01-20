@@ -16,14 +16,14 @@ class Square(Rectangle):
 
         self.integer_validator("size", size)
         super().__init__(size, size)
-        super().__size = size
+        self.__size = size
 
-        def area(self):
-            """ the area() method implemented"""
+    def area(self):
+        """ the area() method implemented"""
 
-            return self.__size * self.__size
+        return self.__size * self.__size
 
-        def __str__(self):
+    def __str__(self):
 
-            """str method should return the square description"""
-            return "[Square] {}/{}".format(self.__width, self.__height)
+        """str method should return the square description"""
+        return "[Square] {}/{}".format(self.__size, self.__size)
