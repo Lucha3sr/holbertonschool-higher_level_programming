@@ -14,7 +14,6 @@ Traceback (most recent call last):
     ...
 TypeError: name must be an integer
 
-
 test 2 main
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
@@ -51,3 +50,10 @@ test 7 with no arguments
 Traceback (most recent call last):
     ...
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+test 8 with two ints
+>>> bg = BaseGeometry()
+>>> bg.integer_validator(1, 2)
+Traceback (most recent call last):
+    ...
+TypeError: name must be a string
