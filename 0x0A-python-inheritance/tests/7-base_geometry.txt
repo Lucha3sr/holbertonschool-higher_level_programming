@@ -54,6 +54,4 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 test 8 with two ints
 >>> bg = BaseGeometry()
 >>> bg.integer_validator(1, 2)
-Traceback (most recent call last):
-    ...
-TypeError: name must be a string
+
