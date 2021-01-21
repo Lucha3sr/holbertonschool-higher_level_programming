@@ -1,26 +1,29 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
->>> bg = BaseGeometry()
 
 test 0 exception requested by task
+>>> bg = BaseGeometry()
 >>> bg.area()
 Traceback (most recent call last):
     ...
 Exception: area() is not implemented
 
 test 1 main
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
     ...
 TypeError: name must be an integer
 
 test 2 main
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
     ...
 ValueError: age must be greater than 0
 
 test 3 main
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
     ...
@@ -77,11 +80,13 @@ Traceback (most recent call last):
 TypeError: age must be an integer
 
 test 12 with str value
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("John", "value")
 Traceback (most recent call last):
 TypeError: John must be an integer
 
 test 13 with float
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("name", 3.3)
 Traceback (most recent call last):
 TypeError: name must be an integer
