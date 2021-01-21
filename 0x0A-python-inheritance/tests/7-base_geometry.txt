@@ -53,7 +53,7 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 
 test 8 with two ints
 >>> bg = BaseGeometry()
->>> bg.integer_validator(1, 2)
+>>> bg.integer_validator(33, 33)
 
 test 9 with dict
 >>> bg = BaseGeometry()
@@ -75,3 +75,8 @@ test 11 with list
 Traceback (most recent call last):
     ...
 TypeError: age must be an integer
+
+test 12 with str value
+>>> bg.integer_validator("John", "value")
+Traceback (most recent call last):
+TypeError: John must be an integer
