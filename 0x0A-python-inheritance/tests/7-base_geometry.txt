@@ -85,3 +85,10 @@ test 13 with float
 >>> bg.integer_validator("name", 3.3)
 Traceback (most recent call last):
 TypeError: name must be an integer
+
+test 14 infinity float
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", 1e100)
+Traceback (most recent call last):
+    ...
+TypeError: name must be an integer
