@@ -80,3 +80,8 @@ test 12 with str value
 >>> bg.integer_validator("John", "value")
 Traceback (most recent call last):
 TypeError: John must be an integer
+
+test 13 with float
+>>> bg.integer_validator("name", 3.3)
+Traceback (most recent call last):
+TypeError: name must be an integer
