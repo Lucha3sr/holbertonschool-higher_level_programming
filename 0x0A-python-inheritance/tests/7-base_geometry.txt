@@ -48,10 +48,10 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 test 7 with None
 >>> bg = BaseGeometry()
->>> bg.integer_validator(None, None)
+>>> bg.integer_validator("age", None)
 Traceback (most recent call last):
     ...
-TypeError: None must be an integer
+TypeError: age must be an integer
 
 test 8 with no arguments
 >>> bg = BaseGeometry()
@@ -104,9 +104,9 @@ Traceback (most recent call last):
     ...
 TypeError: name must be an integer
 
-test 16 None
+test 16 with tuple
 >>> bg = BaseGeometry()
->>> bg.integer_validator(None)
+>>> bg.integer_validator("age", (4,))
 Traceback (most recent call last):
     ...
-TypeError: integer_validator() missing 1 required positional argument: 'value'
+TypeError: age must be an integer
