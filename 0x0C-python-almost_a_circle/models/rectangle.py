@@ -49,7 +49,7 @@ class Rectangle(Base):
     @property
     def x(self):
          """ get value """
-        return self.__x
+         return self.__x
 
     @x.setter
     def x(self, x):
@@ -77,3 +77,26 @@ class Rectangle(Base):
     def area(self):
         """area of rectangle"""
         return self.width * self.height
+
+    def display(self):
+        """prints in stdout the Rectangle instance with the character #"""
+        if self.__y > 0:
+            print('\n' * self.__y, end='')
+
+        for i in range(self.height):
+            if self.__x > 0:
+                print(' ' * self.__x, end='')
+
+            print('#' * self.__width)
+
+    def __str__(self):
+        """Update the class Rectangle by overriding the __str__ method"""
+        return "[Rectangle] ({}) {}/{} - {}/{}" .format(
+            self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args):
+        """assigns an argument to each attribute"""
+        new_attr = ["id", "width", "height", "x", "y"]
+        for i in range (len(args)):
+            if len(args) <= 5
+            setattr(self, new_attr[i], args[i])
