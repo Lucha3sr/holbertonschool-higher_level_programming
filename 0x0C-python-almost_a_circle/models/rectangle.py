@@ -80,13 +80,10 @@ class Rectangle(Base):
 
     def display(self):
         """prints in stdout the Rectangle instance with the character #"""
-        if self.__y > 0:
-            print('\n' * self.__y, end='')
+        print('\n' * self.__y, end='')
 
         for i in range(self.height):
-            if self.__x > 0:
-                print(' ' * self.__x, end='')
-
+            print(' ' * self.__x, end='')
             print('#' * self.__width)
 
     def __str__(self):
@@ -94,9 +91,19 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}" .format(
             self.id, self.__x, self.__y, self.__width, self.__height)
 
-    def update(self, *args):
-        """assigns an argument to each attribute"""
-        new_attr = ["id", "width", "height", "x", "y"]
-        for i in range (len(args)):
-            if len(args) <= 5
-            setattr(self, new_attr[i], args[i])
+    def update(self, *args, **kwargs):
+        """assign an argument to each attribute"""
+        rectangle_attrs = ["id", "width", "height", "x", "y"]
+        if args is None or len(args) == 0:
+            for k, v in kwargs.items():
+                if k in rectangle_attrs:
+                    setattr(self, k, v)
+        else:
+            for i in range (len(args)):
+                setattr(self, rectangle_attrs[i], args[i])
+
+    def to_dictionary(self):
+        """return a dictionary of Rectangle"""
+        rectangle_dict = {'id': self.id, 'width': self.__width,
+                       'height': self.__height, 'x': self.__x, 'y': self.__y}
+        return rectangle_dict
