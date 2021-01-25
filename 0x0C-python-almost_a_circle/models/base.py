@@ -2,6 +2,7 @@
 
 """This class will be the base of all other classes in this project."""
 
+import os
 import json
 
 class Base:
@@ -35,13 +36,19 @@ class Base:
     def save_to_file(cls, list_objs):
 
         """write the JSON string representation of list_objs to a file"""
-        if list_objs is None:
+        filename = cls.__name__ + '.json'
+        with open(filename, mode='w', encoding='utf-8') as f:
             new_list = []
+            if list_objs is None:
+                f.write(cls.to_json_string(new_list))
+            else:
+                for obj in list_objs:
+                    new_list.append(obj.to_dictionary())
+                f.write(cls.to_json_string(new_list))
 
 
     @staticmethod
     def from_json_string(json_string):
-
         """ return the list of the JSON string representation json_string"""
         if json_string is None or len(json_string) == 0:
             return []
@@ -50,5 +57,20 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-
         """returns an instance with all attributes already set"""
+        dummy_inst = cls(1, 2, 3, 4)
+        cls.update(dummy_inst, **dictionary)
+        return dummy_inst
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        inst_list = []
+        filename = cls.__name__ + '.json'
+        if os.path.exists(filename) is False:
+            return inst_list
+        with open(filename, mode='r', encoding='utf-8') as f:
+            objs = cls.from_json_string(f.read())
+            for obj in objs:
+                inst_list.append(cls.create(**obj))
+            return inst_list
