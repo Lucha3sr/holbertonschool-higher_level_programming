@@ -5,6 +5,7 @@
 import os
 import json
 
+
 class Base:
 
     """private class attribute __nb_objects = 0"""
@@ -45,7 +46,6 @@ class Base:
                 for obj in list_objs:
                     new_list.append(obj.to_dictionary())
                 f.write(cls.to_json_string(new_list))
-
 
     @staticmethod
     def from_json_string(json_string):

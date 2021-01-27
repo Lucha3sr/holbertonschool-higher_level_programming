@@ -4,9 +4,10 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
 
-    """Private instance attributes each with its own public getter and setter"""
+    """Private instance attributes with its own public getter and setter"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
 
@@ -48,8 +49,8 @@ class Rectangle(Base):
 
     @property
     def x(self):
-         """ get value """
-         return self.__x
+        """ get value """
+        return self.__x
 
     @x.setter
     def x(self, x):
@@ -99,11 +100,12 @@ class Rectangle(Base):
                 if k in rectangle_attrs:
                     setattr(self, k, v)
         else:
-            for i in range (len(args)):
+            for i in range(len(args)):
                 setattr(self, rectangle_attrs[i], args[i])
 
     def to_dictionary(self):
         """return a dictionary of Rectangle"""
         rectangle_dict = {'id': self.id, 'width': self.__width,
-                       'height': self.__height, 'x': self.__x, 'y': self.__y}
+                          'height': self.__height,
+                          'x': self.__x, 'y': self.__y}
         return rectangle_dict
