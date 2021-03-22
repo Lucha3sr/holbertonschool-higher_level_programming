@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const firstArg = parseInt(process.argv[2]);
-if (firstArg) {
+if ( isNaN(firstArg) === false) {
   let i;
   let ii;
   for (i = 0; i < firstArg; i++) {
