@@ -7,14 +7,14 @@ module.exports = class Rectangle {
     }
   }
 
-    print() {
+  print () {
     let i;
     let ii;
     for (i = 0; i < this.height; i++) {
       for (ii = 0; ii < this.width; ii++) {
-	  process.stdout.write('X');
+        process.stdout.write('X');
       }
       console.log();
     }
-    }
+  }
 };
