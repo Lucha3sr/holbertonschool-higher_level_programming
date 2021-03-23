@@ -33,7 +33,7 @@ class TestRectangleDocs(unittest.TestCase):
     def setUpClass(cls):
         """test class setup"""
         Base._Base__nb_objects = 0
-        cls.r1 = Rectangle(10, 10)
+        cls.r1 = Rectangle(2, 10)
         cls.r2 = Rectangle(2, 3, 4)
 
     def test_id(self):
@@ -43,7 +43,7 @@ class TestRectangleDocs(unittest.TestCase):
 
     def test_width(self):
         """Test for functioning width"""
-        self.assertEqual(self.r1.width, 10)
+        self.assertEqual(self.r1.width, 2)
         self.assertEqual(self.r2.width, 2)
 
     def test_height(self):
@@ -73,7 +73,7 @@ class TestRectangleDocs(unittest.TestCase):
 
     def test_area(self):
         """test area"""
-        self.assertEqual(self.r1.area(), 100)
+        self.assertEqual(self.r1.area(), 20)
         self.assertEqual(self.r2.area(), 6)
 
     def test_area_args(self):
