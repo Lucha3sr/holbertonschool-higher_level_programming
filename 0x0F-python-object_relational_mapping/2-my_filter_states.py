@@ -3,10 +3,10 @@
 """script that takes in an argument and displays all values in the states
 table of hbtn_0e_0_usa where name matches the argument"""
 
-if __name__ == '__main__':
+from sys import argv
+import MySQLdb
 
-    from sys import argv
-    import MySQLdb
+if __name__ == '__main__':
 
     MY_USER = argv[1]
     MY_PASS = argv[2]

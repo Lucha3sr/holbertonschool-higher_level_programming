@@ -2,10 +2,10 @@
 
 """Script that lists all states from the database hbtn_0e_0_usa"""
 
-if __name__ == "__main__":
+from sys import argv
+import MySQLdb
 
-    from sys import argv
-    import MySQLdb
+if __name__ == "__main__":
 
     MY_USER = argv[1]
     MY_PASS = argv[2]
@@ -22,5 +22,5 @@ if __name__ == "__main__":
     for r in rows:
         print(r)
 
-    cur.close()
-    db.close()
+        cur.close()
+        db.close()
