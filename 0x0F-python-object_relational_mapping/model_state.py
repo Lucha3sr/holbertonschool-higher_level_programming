@@ -4,17 +4,15 @@
  and an instance Base = declarative_base()"""
 
 import sys
-from model_state import Base, State
 
 from sqlalchemy import (create_engine)
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
 
-if __name__ == "__main__":
+Base = declarative_base()
 
-    MY_HOST = "localhost"
-    MY_USER = argv[1]
-    MY_PASS = argv[2]
-    MY_DB = argv[3]
+class State(Base):
 
-    engine = create_engine('mysql+mysqldb://{}:{}@MY_HOST/{}'
-                           .format(MY_USER, MY_PASS, MY_DB)
-    Base.metadata.create_all(engine)
+    __tablename__ = 'states'
+    id = Column(Integer, primary_key=True, unique=True, nullable=False)
+    name =  Column(String(128), nullable=False)
