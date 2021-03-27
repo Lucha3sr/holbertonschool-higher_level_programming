@@ -2,17 +2,13 @@
 
 """Script that lists all states from the database hbtn_0e_0_usa"""
 
+from sys import argv
+import MySQLdb
+
 if __name__ == "__main__":
 
-    from sys import argv
-    import MySQLdb
-
-    MY_USER = argv[1]
-    MY_PASS = argv[2]
-    MY_DB = argv[3]
-
-    db = MySQLdb.connect(host="localhost", port=3306, user=MY_USER,
-                         passwd=MY_PASS, db=MY_DB)
+    db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
+                         passwd=argv[2], db=argv[3])
     cur = db.cursor()
     cur.execute("SELECT * FROM states WHERE name LIKE 'N%'
                 ORDER BY states.id ASC")
