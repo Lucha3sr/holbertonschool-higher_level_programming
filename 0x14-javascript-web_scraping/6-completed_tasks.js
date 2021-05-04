@@ -1,11 +1,11 @@
 #!/usr/bin/node
-const request = require('request');
+let request = require('request');
 request(process.argv[2], function (response, body) {
-  const tasks = (JSON.parse(body.body));
-  const tasksDone = {};
+  let tasks = (JSON.parse(body.body));
+  let tasksDone = {};
   let count = 0;
-  for (const task in tasks) {
-    const userID = tasks[task].userId;
+  for (let task in tasks) {
+    let userID = tasks[task].userId;
     if (!(userID in tasksDone)) {
       count = 0;
     }
