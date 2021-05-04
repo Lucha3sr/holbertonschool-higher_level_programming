@@ -10,7 +10,7 @@ request(process.argv[2], function (response, body) {
       count = 0;
     }
     if (tasks[task].completed === true) {
-      count += 1;
+      count++;
     }
     tasksDone[userID] = count;
   }
