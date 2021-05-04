@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
-const urlId = process.argv[2] + '/?format=json';
+const urlId = process.argv[2];
 request(urlId, function (response, body) {
   const filmList = (JSON.parse(body.body).results);
   let count = 0;
