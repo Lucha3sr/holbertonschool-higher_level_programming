@@ -1,15 +1,15 @@
 #!/usr/bin/node
-let request = require('request');
+const request = require('request');
 request(process.argv[2], function (response, body) {
-  let tasks = (JSON.parse(body.body));
-  let tasksDone = {};
+  const tasks = (JSON.parse(body.body));
+  const tasksDone = {};
   let count = 0;
-  for (let task in tasks) {
-    let userID = tasks[task].userId;
+  for (const task in tasks) {
+    const userID = tasks[task].userId;
     if (!(userID in tasksDone)) {
       count = 0;
     }
-    if (tasks[task].completed) {
+    if (tasks[task].completed === true) {
       count += 1;
     }
     tasksDone[userID] = count;
