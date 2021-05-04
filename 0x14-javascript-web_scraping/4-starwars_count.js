@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 const urlId = process.argv[2] + '/?format=json';
-request.get(urlId, function (response, body) {
+request(urlId, function (response, body) {
   const filmList = (JSON.parse(body.body).results);
   let count = 0;
   for (const film in filmList) {
